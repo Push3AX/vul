@@ -6,7 +6,7 @@
 
 **Product page:** https://connectivity.viessmann.com/gb/mp-fp/vitogate/vitogate-300-bn-mb.html
 
-**Affected system version: **2.1.3.0 and lower
+**Affected system version:** 2.1.3.0 and lower
 
 **Firmware download address:** https://connectivity.viessmann.com/gb/mp-fp/vitogate/vitogate-300-bn-mb/release-historie.html
 
