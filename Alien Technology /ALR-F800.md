@@ -6,11 +6,11 @@
 
 **Product page:** https://www.alientechnology.com/products/readers/alr-f800/
 
-**Affected system version: **19.10.24.00 and lower
+**Affected system version:** 19.10.24.00 and lower
 
 **Firmware download:** https://www.alientechnology.com/download/alr-f800-software/?wpdmdl=7609&ind=MTU3NTQ4MjY2NndwZG1fYWxpZW4tZmlybXdhcmVfMTkuMTAuMjQuMDBfZjgwMC5hZWQ
 
-**Shodan keyword: **http.title:"ALR-F800"
+**Shodan keyword:** http.title:"ALR-F800"
 
 **Reported by:**  Wentao Yang (pushe4x@gmail.com)
 
@@ -20,7 +20,7 @@
 
 ALR-F800 is a high-performance RFID reader and features Gatescape web interface.
 
-Several vulnerabilities have been found in the` /cmd.php`、`/cgi-bin/upgrade.cgi`、`/admin/system.html`，allowing unauthorized attackers to modify web interface login credentials and execute arbitrary commands via a crafted request.
+Several vulnerabilities have been found in the `/cmd.php`、`/cgi-bin/upgrade.cgi`、`/admin/system.html`，allowing unauthorized attackers to modify web interface login credentials and execute arbitrary commands via a crafted request.
 
 
 
@@ -51,7 +51,7 @@ After the attack, the default account (username `Alien`) for the web interface a
 
 This vulnerability exists in `/var/www/cgi-bin/upgrade.cgi`. This file takes the user-uploaded update package, appends the filename to the update command without any filtering, and then calls `popen` with the command string executed as an argument.
 
-![image-20240719161359488](/https://raw.githubusercontent.com/Push3AX/vul/main/pic/image-20240719161359488.png)
+![image-20240719161359488](https://raw.githubusercontent.com/Push3AX/vul/main/pic/image-20240719161359488.png)
 
 After gaining system login access through the previous vulnerability, an attacker can execute system commands by crafting a malicious filename. 
 
